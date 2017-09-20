@@ -6,10 +6,6 @@
 apt_update
 package 'mongodb'
 
-package 'mongodb' do
-	action :upgrade
-end
-
 service 'mongodb' do 
 	supports status: true, restart: true
 	action [:enable, :start]
